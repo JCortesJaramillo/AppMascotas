@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LoginSignup</string>
+    <string name="enter_full_name">Enter Full Name</string>
+
+    <string-array name="role_array">
+        <item>Dueño de mascota</item>
+        <item>Veterinario</item>
+        <item>Cuidador</item>
+    </string-array>
+</resources>
