@@ -15,6 +15,9 @@
         <!-- Actividad de registro -->
         <activity android:name=".actividades.Signup_Form" />
 
+        <!-- Nueva actividad para Mascotas -->
+        <activity android:name=".actividades.Mascotas_Form" />
+
         <!-- Actividad de login (Login_Form) -->
         <activity
             android:name=".actividades.Login_Form"

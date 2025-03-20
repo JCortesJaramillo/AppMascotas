@@ -1,0 +1,55 @@
+package com.example.loginsignup.actividades;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
+import com.example.loginsignup.R;
+import com.example.loginsignup.baseDatos.dao.MascotaDao;
+import com.example.loginsignup.baseDatos.entidades.BaseDatos;
+import com.example.loginsignup.baseDatos.entidades.Mascota;
+
+import java.util.List;
+
+public class Mascotas_Form extends AppCompatActivity {
+
+    private RecyclerView recyclerViewMascotas;
+    private MascotasAdapter mascotasAdapter;
+    private MascotaDao mascotaDao;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_mascotas);
+
+        // Inicialización de la base de datos y el DAO
+        BaseDatos db = Room.databaseBuilder(getApplicationContext(), BaseDatos.class, "aplicacion_db").allowMainThreadQueries().build();
+        mascotaDao = db.mascotaDao();
+
+        // Configuración del RecyclerView
+        recyclerViewMascotas = findViewById(R.id.recyclerViewMascotas);
+        recyclerViewMascotas.setLayoutManager(new LinearLayoutManager(this));
+
+        // Cargar las mascotas
+        List<Mascota> listaMascotas = mascotaDao.obtenerMascotasDeUsuario(1); // Aquí puedes pasar el ID del usuario actual
+
+        // Configurar el adaptador
+        mascotasAdapter = new MascotasAdapter(listaMascotas, mascota -> {
+            // Acciones cuando se hace clic en una mascota (por ejemplo, ir a la vista detallada de la mascota)
+            Toast.makeText(Mascotas_Form.this, "Seleccionaste: " + mascota.nombre, Toast.LENGTH_SHORT).show();
+        });
+
+        recyclerViewMascotas.setAdapter(mascotasAdapter);
+
+        // Botón para registrar una nueva mascota
+        Button registerButton = findViewById(R.id.registerButton);
+        registerButton.setOnClickListener(v -> {
+           // startActivity(new Intent(Mascotas_Form.this, Registro_Mascota_Form.class));
+        });
+    }
+}
+
