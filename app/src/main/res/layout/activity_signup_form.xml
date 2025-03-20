@@ -7,15 +7,15 @@
     android:background="@color/fondo"
     android:orientation="vertical"
     android:padding="30dp"
-    tools:context=".Signup_Form">
+    tools:context=".actividades.Signup_Form">
 
     <!-- Nombre completo -->
     <EditText
-        android:id="@+id/editTextFullName"
+        android:id="@+id/editTextNombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="Nombre completo"
+        android:hint="@string/nombre_hint"
         android:inputType="text"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,16 +24,16 @@
 
     <!-- Nombre de usuario -->
     <EditText
-        android:id="@+id/editTextUserName"
+        android:id="@+id/editTextApellido"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="Nombre de usuario"
+        android:hint="@string/apellido_hint"
         android:inputType="text"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextFullName" />
+        app:layout_constraintTop_toBottomOf="@id/editTextNombre" />
 
     <!-- Correo electrónico -->
     <EditText
@@ -41,20 +41,20 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="Correo electronico"
+        android:hint="@string/correo_hint"
         android:inputType="textEmailAddress"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextUserName" />
+        app:layout_constraintTop_toBottomOf="@id/editTextApellido" />
 
     <!-- Contraseña -->
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/editTextContraseña"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="contraseña"
+        android:hint="@string/contraseña_hint"
         android:inputType="textPassword"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,16 +63,16 @@
 
     <!-- Confirmar Contraseña -->
     <EditText
-        android:id="@+id/editTextConfirmPassword"
+        android:id="@+id/editTextConfirmacionContraseña"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="Confirmar contraseña"
+        android:hint="@string/contraseña_confirmacion_hint"
         android:inputType="textPassword"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
+        app:layout_constraintTop_toBottomOf="@id/editTextContraseña" />
 
     <!-- Calle / Dirección -->
     <EditText
@@ -85,31 +85,31 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextConfirmPassword" />
+        app:layout_constraintTop_toBottomOf="@id/editTextConfirmacionContraseña" />
 
     <!-- Fecha de Nacimiento -->
     <TextView
-        android:id="@+id/textViewBirthDate"
+        android:id="@+id/textViewTelefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Fecha de nacimiento:"
+        android:text="@string/telefono"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextStreet" />
 
     <!-- EditText para seleccionar fecha de nacimiento -->
     <EditText
-        android:id="@+id/editTextBirthDate"
+        android:id="@+id/editTextTelefono"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="Seleccione fecha de nacimiento"
+        android:hint="@string/telefono_hint"
         android:inputType="date"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewBirthDate" />
+        app:layout_constraintTop_toBottomOf="@id/textViewTelefono" />
 
     <!-- Selección de rol -->
     <TextView
@@ -120,7 +120,7 @@
         android:text="Seleccione Rol:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextBirthDate" />
+        app:layout_constraintTop_toBottomOf="@id/editTextTelefono" />
 
     <!-- Spinner para seleccionar rol -->
     <Spinner

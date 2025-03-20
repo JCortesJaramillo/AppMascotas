@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">LoginSignup</string>
-    <string name="enter_full_name">Enter Full Name</string>
-
+    <string name="nombre_hint">Nombre</string>
+    <string name="apellido_hint">Apellidos</string>
+    <string name="correo_hint">Correo electronico</string>
+    <string name="telefono">Teléfono:</string>
+    <string name="telefono_hint">teléfono</string>
+    <string name="contraseña_hint">Contraseña</string>
+    <string name="contraseña_confirmacion_hint">Confirmación contraseña</string>
     <string-array name="role_array">
         <item>Dueño de mascota</item>
         <item>Veterinario</item>
