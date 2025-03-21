@@ -18,6 +18,16 @@
         <!-- Nueva actividad para Mascotas -->
         <activity android:name=".actividades.Mascotas_Form" />
 
+        <!-- Otras actividades -->
+        <activity android:name=".actividades.BotonesHistoriasdeUsuario" />
+        <activity android:name=".actividades.AgregarDatosHistoriaMedica" />
+        <activity android:name=".actividades.HistorialClinico" />
+        <activity android:name=".actividades.RecomendacionesAlimentacion" />
+        <activity android:name=".actividades.ListaComprasActivity" />
+        <activity android:name=".actividades.EnfermedadesCronicasActivity" />
+        <activity android:name=".actividades.RestriccionesMascotaActivity" />
+
+
         <!-- Actividad de login (Login_Form) -->
         <activity
             android:name=".actividades.Login_Form"
